@@ -6,7 +6,10 @@ dest=/home/kopiykovskay/Documents/destination
 for file in $(find $source -printf "%P\n") ; do
     if [ -a $dest/$file ] ; then
         if [ $source/$file -nt $dest/$file ] ; then
-        echo "Newer file detected, copying..."
+
+
+
+        echo "Newer file"
         cp -r $source/$file $dest/$file 
         else 
         echo "File $file exists, skipping. "
